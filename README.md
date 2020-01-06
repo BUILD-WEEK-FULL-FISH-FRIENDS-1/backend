@@ -20,9 +20,7 @@ Quick Links: [Logs Overview](#logs-overview) | [User Overview](#user-overview) |
 ## User Overview
 | Method | Endpoint                  | Requires                          | Description                                              |
 | -------| ------------------------- | --------------------------------- | -------------------------------------------------------- |
-|  GET   | `/api/user/:id/`          | authorization header given when   | Used to retireve a users information                     |
-|        |                           | logging in                        |                                                          |
-| ------ | ------------------------- | --------------------------------- | -------------------------------------------------------- |
+|  GET   | `/api/user/:id/`          | authorization header given when logging in  | Used to retireve a users information                     |
 |  GET   | `/api/user/:id/logs/`     | authorization header given when   | Used to retrieve an array of a user's logs               |
 |        |                           | logging in                        |                                                          |
 | ------ | ------------------------- | --------------------------------- | -------------------------------------------------------- |
