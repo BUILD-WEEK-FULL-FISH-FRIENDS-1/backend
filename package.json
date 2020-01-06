@@ -1,0 +1,43 @@
+{
+  "name": "fish-friends-backend",
+  "version": "1.0.0",
+  "description": "fish friends backend for user and log storage",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "cross-env DB_ENV=testing jest --watch",
+    "start": "node index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BUILD-WEEK-FULL-FISH-FRIENDS-1/backend.git"
+  },
+  "keywords": [],
+  "author": "Nicolas Janes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BUILD-WEEK-FULL-FISH-FRIENDS-1/backend/issues"
+  },
+  "homepage": "https://github.com/BUILD-WEEK-FULL-FISH-FRIENDS-1/backend#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "babel-jest": "^24.9.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "jest": "^24.9.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.4",
+    "sqlite3": "^4.1.1",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
