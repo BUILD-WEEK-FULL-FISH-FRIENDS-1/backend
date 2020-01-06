@@ -41,5 +41,7 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-    return knex.schema.dropTableIfEists('users');
+    return knex.schema
+        .dropTableIfEists('users')
+        .dropTableIfEists('logs');
 };

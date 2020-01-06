@@ -1,0 +1,45 @@
+const router = require('express').Router();
+
+const Users = require('./users-model.js');
+const Logs = require('../logs/logs-model.js');
+const restricted = require('../auth/auth-middleware.js');
+
+router.get('/:id', restricted, (req, res) => {
+    Users.findById(req.params.id)
+        .then(user => {
+            res.json(user);
+        })
+        .catch(err => res.send(err));
+});
+
+router.get('/:id/logs', restricted, (req, res) => {
+    Logs.findBy(req.params.id, 'userId')
+        .then(logs => {
+            res.status(200).json(logs);
+        })
+        .catch(err => {
+            res.send(err);
+        })
+});
+
+router.post('/:id/logs', restricted, (req, res) => {
+    Logs.add(req.body)
+        .then(log => {
+            res.status(200).json(log);
+        })
+        .catch(err => {
+            res.send(err);
+        })
+})
+
+router.put('/:id/logs/:id', restricted, (req, res) => {
+    Logs.updateLog(req.body, req.params.id)
+        .then(updated => {
+            res.status(200).json(updated);
+        })
+        .catch(err => {
+            res.send(err);
+        })
+})
+
+module.exports = router;

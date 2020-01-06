@@ -4,10 +4,10 @@ module.exports = {
 
   development: {
     client: 'sqlite3',
+    useNullAsDefault: true,
     connection: {
       filename: './database/fishfriends.db3'
     },
-    useNullAsDefault: true,
     migrations: {
       directory: './database/migrations'
     },
