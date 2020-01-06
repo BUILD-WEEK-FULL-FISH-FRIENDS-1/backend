@@ -13,9 +13,7 @@ Quick Links: [Logs Overview](#logs-overview) | [User Overview](#user-overview) |
 ## Logs Overview
 | Method | Endpoint                  | Requires                          | Description                                              |
 |--------|---------------------------|-----------------------------------|----------------------------------------------------------|
-|  GET   | `/api/logs/`              |              nothing              | Used to retireve a lits of all logs posted by users from 
-|        |                           |                                   | the site.                                                |
-| ------ | ------------------------- | --------------------------------- | -------------------------------------------------------- |
+|  GET   | `/api/logs/`              |              nothing              | Used to retireve a lits of all logs posted by users from the site.|
 
 ---
 
