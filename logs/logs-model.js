@@ -46,7 +46,6 @@ function updateLog(changes, id) {
 
 function remove(id) {
   return db("logs")
-    .select('*')
     .where({ id })
     .del()
 }
