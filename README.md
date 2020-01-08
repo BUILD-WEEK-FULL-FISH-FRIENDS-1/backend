@@ -24,6 +24,7 @@ Quick Links: [Logs Overview](#logs-overview) | [User Overview](#user-overview) |
 |  GET   | `/api/user/:id/logs/`     | authorization header given when logging in  | Used to retrieve an array of a user's logs               |
 |  POST  | `/api/user/:id/logs/`     | title, userId, location, log, score (bait and fish are optional)    | Used to add a new log with an id to link it to a user    | 
 |  PUT   | `api/user/:id/logs/:id`   | title, userId, location, log, score (bait and fish are optional)     | Used to edit a log with an id to link it to a user       |
+|Delete|`api/user/:id/logs/:id`|authorization header given when logging in|Used to delete a log from a user's account|
 
 ---
 
