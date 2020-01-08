@@ -5,7 +5,8 @@ module.exports = {
   find,
   findBy,
   findById,
-  updateLog
+  updateLog,
+  remove
 };
 
 function find() {
@@ -41,4 +42,11 @@ function updateLog(changes, id) {
         .then(ids => {
             return findById(ids);
         });
+}
+
+function remove(id) {
+  return db("logs")
+    .select('*')
+    .where({ id })
+    .del()
 }

@@ -42,4 +42,16 @@ router.put('/:id/logs/:id', restricted, (req, res) => {
         })
 })
 
+router.delete('/:id/logs/:id', restricted, (req, res) => {
+    Logs.remove(req.params.id)
+        .then(num => {
+            if(num > 0) {
+                res.status(200).json({message: 'removed log' });
+            } else {
+                res.status(404).json({ message: 'Log could not be found' })
+            }
+        })
+        .catch(err => (res.send(err)))
+})
+
 module.exports = router;
