@@ -9,7 +9,7 @@ router.get('/:id', restricted, (req, res) => {
         .then(user => {
             res.json(user);
         })
-        .catch(err => res.send(err));
+        .catch(err => res.status(500).json(err));
 });
 
 router.get('/:id/logs', restricted, (req, res) => {
@@ -18,7 +18,7 @@ router.get('/:id/logs', restricted, (req, res) => {
             res.status(200).json(logs);
         })
         .catch(err => {
-            res.send(err);
+            res.status(500).json(err);
         })
 });
 
@@ -28,7 +28,7 @@ router.post('/:id/logs', restricted, (req, res) => {
             res.status(200).json(log);
         })
         .catch(err => {
-            res.send(err);
+            res.status(500).json(err);
         })
 })
 
@@ -38,7 +38,7 @@ router.put('/:id/logs/:id', restricted, (req, res) => {
             res.status(200).json(updated);
         })
         .catch(err => {
-            res.send(err);
+            res.status(500).json(err);
         })
 })
 
@@ -51,7 +51,7 @@ router.delete('/:id/logs/:id', restricted, (req, res) => {
                 res.status(404).json({ message: 'Log could not be found' })
             }
         })
-        .catch(err => (res.send(err)))
+        .catch(err => (res.status(500).json(err)))
 })
 
 module.exports = router;

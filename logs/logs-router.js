@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
             res.status(200).json(logs);
         })
         .catch(err => {
-            res.send(err)
+            res.status(500).json(err);
         });
 });
 
@@ -18,7 +18,7 @@ router.get('/:id', (req, res) => {
             res.status(200).json(log);
         })
         .catch(err => {
-            res.send(err);
+            res.status(500).json(err);
         })
 });
 
